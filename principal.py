@@ -1,10 +1,11 @@
 from mathbasi import Mathbasi
 from trig import Trigo
-num = 0
+
 ope = 0
-while (ope != 9):
-    print (f'O número atual é: {num}')
-    num = float(input("Diga o seu primeiro número: "))
+num = float(input("Diga o seu primeiro número: "))
+
+
+while (ope != 10):
     m = Mathbasi(num)
     t = Trigo(num)
     print ("1 - Soma")
@@ -15,7 +16,8 @@ while (ope != 9):
     print ("6 - Raiz")
     print ("7 - Sin, con ou tan")
     print ("8 - Verificar neg")
-    print ('9 - Sair')
+    print ('9 - Modificar número')
+    print ('10 - Sair')
     ope = int(input("Qual você deseja operar? "))
     if ope==1:
         num = (m.soma())
@@ -37,6 +39,8 @@ while (ope != 9):
             num = (t.cos())
         if esc == 'tan':
             num = (t.tan())
+        else:
+            print ("Escolha uma das opções. ")
     if ope==8:
         if (num<0):
             print ("Seu número é negativo. ")
@@ -45,4 +49,17 @@ while (ope != 9):
         else:
             print ("Seu número é zero. ")
     if ope==9:
+        num = float(input("Qual número você deseja colocar? "))
+
+    if ope==10:
+        print ("Fechando o programa. ")
+
+    print (f"O número atual é {num}")
+    opt = input("Você deseja continuar a sequência? s - sim, n - não ")
+    if (opt == 'n'):
+        ope = 10
         print ("Fechando programa. ")
+    elif (opt == 's'):
+        pass
+    else:
+        print ("Erro")

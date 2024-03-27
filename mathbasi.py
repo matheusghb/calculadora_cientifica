@@ -5,31 +5,32 @@ class Mathbasi:
         self.num = num
 
     def soma (self):
-        som = int(input("Qual número você deseja somar? "))
+        som = float(input("Qual número você deseja somar? "))
         self.num = som + self.num
-        return print (f"O resultado é {self.num}")
+        return self.num
 
     def sub (self):
-        subt = int(input("Qual número você deseja subtrair? "))
+        subt = float(input("Qual número você deseja subtrair? "))
         self.num = self.num - subt
         return self.num
 
     def divi (self):
-        divi = int(input("Qual número você deseja dividir? "))
+        divi = float(input("Qual número você deseja dividir? "))
         self.num = (self.num/divi)
         return self.num
 
     def  mult (self):
-        mult = int(input("Diga o número que deseja multiplicar: "))
+        mult = float(input("Diga o número que deseja multiplicar: "))
         self.num = (self.num*mult)
         return self.num
 
     def elev (self):
-        exp = int(input("Diga o expoente: "))
+        exp = float(input("Diga o expoente: "))
+        nume = self.num
         while (exp > 1):
-            self.num = self.num * self.num
+            self.num = self.num * nume
             exp = (exp-1)
-
+        print (f"O resultado foi {self.num}")
         return self.num
 
     def raiz (self):

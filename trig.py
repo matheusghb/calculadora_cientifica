@@ -11,3 +11,7 @@ class Trigo(Mathbasi):
         return math.tan(self.num)
     def cos(self):
         return math.cos(self.num)
+    def rad(self):
+        return math.radians(self.num)
+    def grau(self):
+        return math.degrees(self.num)
